@@ -1,14 +1,7 @@
 package com.dongyang.android.youdongknowme.ui.view.schedule
 
 import android.content.res.ColorStateList
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.PorterDuff
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dongyang.android.youdongknowme.R
@@ -75,10 +68,16 @@ class ScheduleFragment : BaseFragment<FragmentScheduleBinding, ScheduleViewModel
         }
 
         // 최소 날짜, 최대 날짜 지정
+        if(viewModel.currentYear.value == null || viewModel.currentYear.value != LocalDate.now().year){
+            viewModel.setCurrentYear(LocalDate.now())
+        }
+
         binding.mvScheduleCalendar.apply {
-            this.state().edit().setMinimumDate(CalendarDay.from(2023, 1, 1))
-                .setMaximumDate(CalendarDay.from(2025, 2, 28))
-                .commit()
+            viewModel.currentYear.value?.let{
+                this.state().edit().setMinimumDate(CalendarDay.from(it-1, 1, 1))
+                    .setMaximumDate(CalendarDay.from(it+1, 2, 28))
+                    .commit()
+            }
         }
 
         // 연/월 방식으로 타이틀 처리
