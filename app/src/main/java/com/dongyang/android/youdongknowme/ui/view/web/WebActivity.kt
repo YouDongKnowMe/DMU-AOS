@@ -2,6 +2,7 @@ package com.dongyang.android.youdongknowme.ui.view.web
 
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP
 import com.dongyang.android.youdongknowme.R
 import com.dongyang.android.youdongknowme.databinding.ActivityWebBinding
 import com.dongyang.android.youdongknowme.standard.base.BaseActivity
@@ -30,6 +31,7 @@ class WebActivity : BaseActivity<ActivityWebBinding, WebViewModel>() {
         fun newIntent(context: Context, url: String): Intent {
             return Intent(context, WebActivity::class.java).apply {
                 putExtra(KEY_URL, url)
+                flags = FLAG_ACTIVITY_SINGLE_TOP
             }
         }
     }
