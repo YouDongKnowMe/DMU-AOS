@@ -5,30 +5,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_web_top"
-            android:layout_width="0dp"
+        <ImageView
+            android:id="@+id/btn_web_close"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_close"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/btn_web_close"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="4dp"
-                android:layout_marginEnd="16dp"
-                android:clickable="true"
-                android:contentDescription="@null"
-                android:focusable="true"
-                android:padding="8dp"
-                android:src="@drawable/ic_close"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <WebView
             android:id="@+id/wv_web"
@@ -37,7 +26,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl_web_top" />
+            app:layout_constraintTop_toBottomOf="@id/btn_web_close" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
