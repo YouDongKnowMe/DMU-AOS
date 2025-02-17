@@ -1,4 +1,3 @@
-
 object CODE {
     const val SCHOOL_CODE = 1
 
@@ -6,10 +5,10 @@ object CODE {
     const val MECHANICAL_DESIGN_CODE = 102
 
     const val AUTOMATION_ENGINE_CODE = 201
-    const val ROBOT_ENGINE_CODE = 202
+    const val ROBOT_SOFTWARE_CODE = 202
 
     const val COMPUTER_SOFTWARE_ENGINE_CODE = 301
-    const val COMPUTER_INFO_ENGINE_CODE = 302
+    const val WEB_APP_SOFTWARE_ENGINE_CODE = 302
     const val ARTIFICIAL_ENGINE_CODE = 303
 
     const val ELECTRICAL_ENGINE_CODE = 401
@@ -31,4 +30,6 @@ object CODE {
     const val HOTEL_TOURISM_CODE = 604
     const val MANAGEMENT_INFORMATION_CODE = 605
     const val BIG_DATA_MANAGEMENT_CODE = 606
+
+    const val LIBERAL_MAJOR_CODE = 701
 }
