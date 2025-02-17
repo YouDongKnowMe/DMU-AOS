@@ -32,9 +32,9 @@ fun mapDepartmentKoreanToCode(department: String): Int {
         "기계공학과" -> CODE.MECHANICAL_ENGINE_CODE
         "기계설계공학과" -> CODE.MECHANICAL_DESIGN_CODE
         "자동화공학과" -> CODE.AUTOMATION_ENGINE_CODE
-        "로봇공학과" -> CODE.ROBOT_ENGINE_CODE
+        "로봇공학과" -> CODE.ROBOT_SOFTWARE_CODE
         "컴퓨터소프트웨어공학과" -> CODE.COMPUTER_SOFTWARE_ENGINE_CODE
-        "컴퓨터정보공학과" -> CODE.COMPUTER_INFO_ENGINE_CODE
+        "컴퓨터정보공학과" -> CODE.WEB_APP_SOFTWARE_ENGINE_CODE
         "인공지능소프트웨어공학과" -> CODE.ARTIFICIAL_ENGINE_CODE
         "전기공학과" -> CODE.ELECTRICAL_ENGINE_CODE
         "정보전자공학과" -> CODE.INFO_ELECTRONIC_ENGINE_CODE

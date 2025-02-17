@@ -6,13 +6,13 @@ sealed class Department(
     object Mechanical : Department("기계공학과", CODE.MECHANICAL_ENGINE_CODE)
     object MechanicalDesign : Department("기계설계공학과", CODE.MECHANICAL_DESIGN_CODE)
     object Automation : Department("자동화공학과", CODE.AUTOMATION_ENGINE_CODE)
-    object Robot : Department("로봇소프트웨어과", CODE.ROBOT_ENGINE_CODE)
+    object Robot : Department("로봇소프트웨어과", CODE.ROBOT_SOFTWARE_CODE)
     object Electrical : Department("전기공학과", CODE.ELECTRICAL_ENGINE_CODE)
     object InfoElectrical : Department("정보전자공학과", CODE.INFO_ELECTRONIC_ENGINE_CODE)
     object Semiconductor : Department("반도체전자공학과", CODE.SEMICONDUCTOR_ENGINE_CODE)
     object InfoCommunication : Department("정보통신공학과", CODE.INFO_COMMUNICATION_ENGINE_CODE)
     object FireManagement : Department("소방안전관리과", CODE.FIRE_MANAGEMENT_CODE)
-    object ComputerInfo : Department("웹응용소프트웨어공학과", CODE.COMPUTER_INFO_ENGINE_CODE)
+    object WebAppSoftware : Department("웹응용소프트웨어공학과", CODE.WEB_APP_SOFTWARE_ENGINE_CODE)
     object ComputerSoftware : Department("컴퓨터소프트웨어공학과", CODE.COMPUTER_SOFTWARE_ENGINE_CODE)
     object Artificial : Department("인공지능소프트웨어학과", CODE.ARTIFICIAL_ENGINE_CODE)
     object Biochemical : Department("생명화학공학과", CODE.BIOCHEMICAL_ENGINE_CODE)
@@ -27,7 +27,7 @@ sealed class Department(
     object HotelTourism : Department("호텔관광학과", CODE.HOTEL_TOURISM_CODE)
     object BusinessInfo : Department("경영정보학과", CODE.MANAGEMENT_INFORMATION_CODE)
     object BigDataManagement : Department("빅데이터경영과", CODE.BIG_DATA_MANAGEMENT_CODE)
-    object UndeclaredMajor : Department("자유전공학과", CODE.UNDECLARED_MAJOR_CODE)
+    object UndeclaredMajor : Department("자유전공학과", CODE.LIBERAL_MAJOR_CODE)
 
     companion object {
         fun getDepartment(department: String): Department {
@@ -41,7 +41,7 @@ sealed class Department(
                 "반도체전자공학과" -> Semiconductor
                 "정보통신공학과" -> InfoCommunication
                 "소방안전관리과" -> FireManagement
-                "웹응용소프트웨어공학과" -> ComputerInfo
+                "웹응용소프트웨어공학과" -> WebAppSoftware
                 "컴퓨터소프트웨어공학과" -> ComputerSoftware
                 "인공지능소프트웨어학과" -> Artificial
                 "생명화학공학과" -> Biochemical
