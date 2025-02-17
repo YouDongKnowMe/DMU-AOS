@@ -20,11 +20,9 @@ class WebActivity : BaseActivity<ActivityWebBinding, WebViewModel>() {
         }
     }
 
-    override fun initDataBinding() {
-    }
+    override fun initDataBinding() = Unit
 
-    override fun initAfterBinding() {
-    }
+    override fun initAfterBinding() = Unit
 
     companion object {
         private const val KEY_URL = "url"
