@@ -27,7 +27,7 @@ sealed class Department(
     object HotelTourism : Department("호텔관광학과", CODE.HOTEL_TOURISM_CODE)
     object BusinessInfo : Department("경영정보학과", CODE.MANAGEMENT_INFORMATION_CODE)
     object BigDataManagement : Department("빅데이터경영과", CODE.BIG_DATA_MANAGEMENT_CODE)
-    object UndeclaredMajor : Department("자유전공학과", CODE.LIBERAL_MAJOR_CODE)
+    object Liberal : Department("자유전공학과", CODE.LIBERAL_MAJOR_CODE)
 
     companion object {
         fun getDepartment(department: String): Department {
@@ -56,7 +56,7 @@ sealed class Department(
                 "호텔관광학과" -> HotelTourism
                 "경영정보학과" -> BusinessInfo
                 "빅데이터경영과" -> BigDataManagement
-                "자유전공학과" -> UndeclaredMajor
+                "자유전공학과" -> Liberal
                 else -> throw IllegalArgumentException("올바른 타입이 아닙니다.")
             }
         }
