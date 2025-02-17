@@ -104,7 +104,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding, SettingViewModel>()
         binding.btnSettingAppHelp.setOnClickListener {
             val intent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSeRTKalenelmffTbCZeK4mqmQg0palobghkXSoie1FlmV22ZQ/viewform")
+                Uri.parse("https://tally.so/r/n9oq91")
             )
             startActivity(intent)
         }
