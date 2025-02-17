@@ -3,7 +3,6 @@ package com.dongyang.android.youdongknowme.ui.view.setting
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Build
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import androidx.core.content.ContextCompat
@@ -13,6 +12,7 @@ import com.dongyang.android.youdongknowme.standard.base.BaseFragment
 import com.dongyang.android.youdongknowme.ui.view.depart.DepartActivity
 import com.dongyang.android.youdongknowme.ui.view.keyword.KeywordActivity
 import com.dongyang.android.youdongknowme.ui.view.license.LicenseActivity
+import com.dongyang.android.youdongknowme.ui.view.web.WebActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /* 설정 화면 */
@@ -33,7 +33,6 @@ class SettingFragment : BaseFragment<FragmentSettingBinding, SettingViewModel>()
     }
 
     override fun initDataBinding() {
-
         viewModel.myDepartment.observe(viewLifecycleOwner) { myDepartment ->
             binding.tvSettingDepartment.text = myDepartment
         }
@@ -102,17 +101,17 @@ class SettingFragment : BaseFragment<FragmentSettingBinding, SettingViewModel>()
         }
 
         binding.btnSettingAppHelp.setOnClickListener {
-            val intent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://tally.so/r/n9oq91")
+            val intent = WebActivity.newIntent(
+                requireContext(),
+                "https://tally.so/r/n9oq91"
             )
             startActivity(intent)
         }
 
         binding.btnSettingAppPersonalPolicy.setOnClickListener {
-            val intent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://sites.google.com/view/dmforu-privacy-policy/%ED%99%88")
+            val intent = WebActivity.newIntent(
+                requireContext(),
+                "https://sites.google.com/view/dmforu-privacy-policy/%ED%99%88"
             )
             startActivity(intent)
         }

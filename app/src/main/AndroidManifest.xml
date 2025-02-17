@@ -43,6 +43,9 @@
             android:name=".ui.view.depart.OnboardingDepartActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.view.web.WebActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.view.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.YouDongKnowMe.Splash">
