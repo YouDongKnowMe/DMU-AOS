@@ -25,6 +25,7 @@ class SettingFragment : BaseFragment<FragmentSettingBinding, SettingViewModel>()
         registerForActivityResult(StartActivityForResult()) { _ ->
             // 학과 선택 화면 이동 후 재진입 시 학과 재조회 처리
             viewModel.getUserDepartment()
+            viewModel.updateUserDepartment()
         }
 
     override fun initStartView() {

@@ -56,6 +56,7 @@ class DepartActivity : BaseActivity<ActivityDepartBinding, DepartViewModel>(), D
     private fun getDepart(items: ArrayList<String>) {
         return binding.btnDepartComplete.setOnClickListener {
             viewModel.setDepartment(items[viewModel.selectDepartPosition.value ?: 0])
+            setResult(RESULT_OK)
             finish()
         }
     }
