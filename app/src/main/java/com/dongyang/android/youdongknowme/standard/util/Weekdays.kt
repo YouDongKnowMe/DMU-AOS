@@ -7,7 +7,9 @@ enum class Weekdays {
     TUESDAY,
     WEDNESDAY,
     THURSDAY,
-    FRIDAY;
+    FRIDAY,
+    SATURDAY,
+    SUNDAY;
 
     companion object {
 
@@ -18,7 +20,9 @@ enum class Weekdays {
                 DayOfWeek.WEDNESDAY -> WEDNESDAY
                 DayOfWeek.THURSDAY -> THURSDAY
                 DayOfWeek.FRIDAY -> FRIDAY
-                else -> throw IllegalArgumentException("월요일 - 금요일을 벗어났습니다.")
+                DayOfWeek.SATURDAY -> SATURDAY
+                DayOfWeek.SUNDAY -> SUNDAY
+                else -> throw IllegalArgumentException("일주일 범위에 해당되지 않습니다.")
             }
         }
     }
